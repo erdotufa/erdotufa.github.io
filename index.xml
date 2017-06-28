@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BITPROGRAMMER</title>
+    <link>https://erdotufa.github.io/</link>
+    <description>Recent content on BITPROGRAMMER</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>tufaerdogan@gmail.com (Erdogan Tufa)</managingEditor>
+    <webMaster>tufaerdogan@gmail.com (Erdogan Tufa)</webMaster>
+    <lastBuildDate>Thu, 22 Jun 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://erdotufa.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Broken windows</title>
+      <link>https://erdotufa.github.io/post/broken-windows/</link>
+      <pubDate>Thu, 22 Jun 2017 00:00:00 +0000</pubDate>
+      <author>tufaerdogan@gmail.com (Erdogan Tufa)</author>
+      <guid>https://erdotufa.github.io/post/broken-windows/</guid>
+      <description>La teoria della finestra rotta è basata su un esperimento di psicologia sociale condotto nel 1969 dal professor Philip Zimbardo presso l&amp;rsquo;Università di Stanford. Egli mise due auto identiche abbandonate una nel Bronx e l&amp;rsquo;altra a Palo Alto. Quella nel Bronx venne smantellata nel giro di poche ore, mentre quella di Palo Alto rimase intatta. Allora i ricercatori decisero di fare un&amp;rsquo;altra prova rompendo un vetro del auto intatta e nel giro di poco tempo il risultato di degrado fu lo stesso di quella del Bronx.</description>
+    </item>
+    
+    <item>
+      <title>Boy Scout Rule!</title>
+      <link>https://erdotufa.github.io/post/boy-scout-rule/</link>
+      <pubDate>Tue, 20 Jun 2017 00:00:00 +0000</pubDate>
+      <author>tufaerdogan@gmail.com (Erdogan Tufa)</author>
+      <guid>https://erdotufa.github.io/post/boy-scout-rule/</guid>
+      <description>I boy scout americani hanno una regola/principio, lasciare il campo più in ordine di come lo si ha trovato inizialmente. Lo stesso principio è stato ripreso dallo &amp;ldquo;Zio Bob&amp;rdquo; Robert C. Martin il quale lo ha applicato al software nel seguente modo:
+ Lasciate il codice più pulito di come lo avete ritrovato!
+ Molte volte ci capita di riguardare parti del codice scritto in passato ed innorridire per la sua scarsa qualità!</description>
+    </item>
+    
+    <item>
+      <title>About me</title>
+      <link>https://erdotufa.github.io/page/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>tufaerdogan@gmail.com (Erdogan Tufa)</author>
+      <guid>https://erdotufa.github.io/page/about/</guid>
+      <description>My name is Erdogan Tufa.
+I&amp;rsquo;m a full-stack .NET developer who is passionate about design patterns (in the real world), SOLID principles, and clean code practices.</description>
+    </item>
+    
+  </channel>
+</rss>

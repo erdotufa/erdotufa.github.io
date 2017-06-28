@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on BITPROGRAMMER</title>
+    <link>https://erdotufa.github.io/page/</link>
+    <description>Recent content in Pages on BITPROGRAMMER</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>tufaerdogan@gmail.com (Erdogan Tufa)</managingEditor>
+    <webMaster>tufaerdogan@gmail.com (Erdogan Tufa)</webMaster>
+    
+	<atom:link href="https://erdotufa.github.io/page/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About me</title>
+      <link>https://erdotufa.github.io/page/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>tufaerdogan@gmail.com (Erdogan Tufa)</author>
+      <guid>https://erdotufa.github.io/page/about/</guid>
+      <description>My name is Erdogan Tufa.
+I&amp;rsquo;m a full-stack .NET developer who is passionate about design patterns (in the real world), SOLID principles, and clean code practices.</description>
+    </item>
+    
+  </channel>
+</rss>
