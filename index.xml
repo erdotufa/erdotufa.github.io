@@ -45,17 +45,6 @@ A cosa é dovuto?  La maggioranza dei progetti parte da un idea apparentemente &
     </item>
     
     <item>
-      <title>Liskov substitution</title>
-      <link>https://erdotufa.github.io/post/liskov-substitution/</link>
-      <pubDate>Wed, 05 Jul 2017 00:00:00 +0000</pubDate>
-      <author>tufaerdogan@gmail.com (Erdogan Tufa)</author>
-      <guid>https://erdotufa.github.io/post/liskov-substitution/</guid>
-      <description>La L dei principi SOLID stà per Liskov Substitution Principle (LSP), la sua definizione tradotta in italiano é la seguente:
- Le classi derivate devono sempre poter essere sostituite dalle classi da cui queste derivano (superclassi) in maniera trasparente.
- Cosa significa? Significa avere classi più piccole ognuna con una sola responsabilità! Su molti testi si trova consigliato classi di dimensioni che non superano le 100-150 righe di codice al contrario delle &amp;ldquo;God class&amp;rdquo; dove ho una classe sola che &amp;ldquo;fa tutto&amp;rdquo;, invece il consiglio è di avere il codice dove non supera la schermata vedendo tutto senza dovere scrollare col mouse.</description>
-    </item>
-    
-    <item>
       <title>Broken windows</title>
       <link>https://erdotufa.github.io/post/broken-windows/</link>
       <pubDate>Thu, 22 Jun 2017 00:00:00 +0000</pubDate>
