@@ -5,9 +5,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Tags</title>
-  <meta property="og:title" content="Tags" />
-  <meta name="twitter:title" content="Tags" />
+  <title>Open-Closed</title>
+  <meta property="og:title" content="Open-Closed" />
+  <meta name="twitter:title" content="Open-Closed" />
+  <meta name="description" content="Open-Closed.">
+  <meta property="og:description" content="Open-Closed.">
+  <meta name="twitter:description" content="Open-Closed.">
   <meta name="author" content="Erdogan Tufa"/>
   <link href='https://erdotufa.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
   <meta property="og:image" content="https://erdotufa.github.io/img/linkedin.png" />
@@ -15,12 +18,12 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@erdotufa" />
   <meta name="twitter:creator" content="@erdotufa" />
-  <meta property="og:url" content="https://erdotufa.github.io/tags/" />
+  <meta property="og:url" content="https://erdotufa.github.io/post/open-closed/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="BITPROGRAMMER" />
 
   <meta name="generator" content="Hugo 0.20.7" />
-  <link rel="canonical" href="https://erdotufa.github.io/tags/" />
+  <link rel="canonical" href="https://erdotufa.github.io/post/open-closed/" />
   <link rel="alternate" href="https://erdotufa.github.io/index.xml" type="application/rss+xml" title="BITPROGRAMMER">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -109,11 +112,22 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <div class="page-heading">
+            <div class="post-heading">
               
-              <h1>Tags</h1>
+              <h1>Open-Closed</h1>
               
                 
+                  
+                    <h2 class="post-subheading">Open-Closed.</h2>
+                  
+                
+                
+                  <span class="post-meta">
+  Posted on September 7, 2017
+  
+</span>
+
+
                 
             </div>
           </div>
@@ -124,26 +138,84 @@
 
 
     
-  
-  <div class="container" role="main">
-    <article class="post-preview">
-      <div class="list-group col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3">
+<div class="container" > 
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>La O dei principi SOLID stà per Open Closed Principle (OCP), la sua definizione tradotta in italiano é la seguente:</p>
+
+<blockquote>
+<p>Una qualsiasi entità software (classe, modulo,  funzione, ecc.) dovrebbe avere meccanismi che permettono di estenderne il comportamento senza apportare modifiche al codice preesistente.  Quindi Aperte alle estensioni ma chiuse alle modifiche; da qui il nome Open-Closed.</p>
+</blockquote>
+
+<p>Questo insieme alla SRP è un&rsquo;altro principio molto importante. Ma come si fa ad estendere una funzionalità senza modificare il codice esistente?</p>
+
+<blockquote>
+<p>It Depends &ldquo;Socrate&rdquo;</p>
+</blockquote>
+
+<p>Ci sono varie tecniche che si possono utilizzare.
+Lo strategy pattern ad esempio è una tecnica molto utilizzata per rendere il nostro software estensibile.
+Riprendiamo l&rsquo;esempio del copy program nella versione agile. rif al articolo intro</p>
+
+<pre><code class="language-C#">public interface Reader
+{
+    int Read();
+}
+public class KeyboardReader : Reader
+{
+    public int Read() {return Keyboard.Read();}
+}
+public class Copier
+{
+    public static Reader reader = new KeyboardReader();
+    public static void Copy()
+    {
+        int c;
+        while((c=(reader.Read())) != -1)
+            Printer.Write(c);
+    }
+}
+</code></pre>
+
+<p>Viene utilizzata la tecnica dello strategy nella parte di Reading questo mi permette di aggiungere una nuova fonte (device) di lettura (quindi open al estensione) ma la cosa più importante è che non devo modificare la funzione Copy (quindi Closed), l&rsquo;importante e che mantengo valida l&rsquo;interfaccia.</p>
+
+<p>Il decorator (interceptor) pattern ad esempio mi permette di decorare una funzionalità esistente senza dovere modificare il codice esiste. Difatti alcune volte siamo obbligati ad usare il decorator quando dobbiamo lavorare su un componente black-box sviluppato da terze parti di cui non si ha accesso al codice e si vuole aggiungere la funzionalità di log.</p>
+
+<p>Un altro pattern utilizzato è il visitor sovente con la tecnica di double-dispatch. Il visitor è una specie di pattern matching dei linguaggi functional; molto simile al decorator come principio mi permette di estendere le funzionalità di un oggetto senza aggiungere direttamente il codice all&rsquo; oggetto. Un esempio di utilizzo classico del visitor è quando si vuole creare una parte di Reporting di una visualizzazione tabellare dove si ha un oggetto &ldquo;Cell&rdquo; al quale posso aggiungere un metodo &ldquo;Print&rdquo; che prepara la cella e la formatta correttamente per essere stampata. Questa è la soluzione più semplice quella che ci viene spontanea ma stiamo violando la SRP!
+Cosa accade se ora vogliamo esportare in PDF? Aggiungiamo un&rsquo;altro metodo &ldquo;ExportPdf&rdquo;? E se dobbiamo convertire la tabella in JSON? È compito/responsabilità della cella conoscere il comportamento in stampa? Su questo argomento ho sempre discusso molto con altri sviluppatori dove ognuno ha un punto di vista differente. Cosa succede se vogliamo riutilizzare l&rsquo;oggetto cella in un&rsquo;altro progetto? Dobbiamo riportare anche tutti i riferimenti di librerie che ho dovuto aggiungere per formattare la cella in JSON! Ecco che il Visitor ci viene in aiuto se vogliamo mantenere la SRP.
+Un&rsquo;altro esempio di implementazione di questo pattern si trova nel codice di Roslyn (link) dove in fase di compilazione e parsing del codice (Visiting) posso aggiungere delle mie regole personali sui vari tipi di nodi che vengono percorsi. Il Team di Roslyn ha deciso di implementare come responsabilità (SRP) la parte di visiting permettendo ad altri di estendere ed aggiungere le proprie regole, cosa che sarebbe impossibile per il Team di implemetare tutti i casi possibili.</p>
+
+<p>Solitamente tutti i meccanismi e/o architetture a plugin sono fatti per rendere il software open-closed.</p>
+
+<p>Un altro meccanismo molto efficace è usare un publish-subscribe che oltre a creare uno slegame tra i componenti mi permette di estendere alcune parti semplicemente aggiungendo un nuovo &ldquo;Handler&rdquo;. Ad esempio posso creare un LogHandler che intecetta determinati eventi (o tutti) esistenti e li logga senza dover andare a modificare parti di codice esistenti creando un LogService ad esempio ed iniettandolo in tutti i punti dove si vuole loggare quindi modificherei il codice esistente.
+Oggigiorno si sente molto parlare di architettura Microservices. Io dopo una riflessione sono arrivato alla conclusione che in questo tipo di architettura troviamo sia la SRP che la OCP.
+Ogni singolo servizio/processo dovrebbe avere una singola responsabilità ed essere indipendente dagli altri (SRP). I vari processi solitamente comunicano tramite un Pub-Sub (Bus), posso estendere i miei processi replicandoli N volte oppure, posso aggiungere un nuovo processo che fa da Log centralizzato esattamente come l&rsquo;esempio del Handler precedente.</p>
+
+<p>Osservate lo schema seguente</p>
+
+<p><img src="/img/MonolithVSMicroservices.png" alt="Monolith application VS Microservices" /></p>
+
+<p>Trovate un analogia?</p>
+
+      </article>
+
+      <ul class="pager blog-pager">
+        
+          <li class="previous">
+            <a href="https://erdotufa.github.io/post/single-responsibility/" data-toggle="tooltip" data-placement="top" title="Single Responsibility">&larr; Previous Post</a>
+          </li>
+        
+        
+      </ul>
+
       
-      <a href="/tags/clean-code" class="list-group-item">
-          clean-code<span class="badge">6</span></a>
+        
       
-      <a href="/tags/software-entropy" class="list-group-item">
-          software-entropy<span class="badge">6</span></a>
-      
-      <a href="/tags/refactoring" class="list-group-item">
-          refactoring<span class="badge">5</span></a>
-      
-      <a href="/tags/solid" class="list-group-item">
-          solid<span class="badge">4</span></a>
-      
-      </div>
-    </article>
+
+    </div>
   </div>
+</div>
 
     <footer>
   <div class="container">

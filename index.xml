@@ -7,10 +7,53 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>tufaerdogan@gmail.com (Erdogan Tufa)</managingEditor>
     <webMaster>tufaerdogan@gmail.com (Erdogan Tufa)</webMaster>
-    <lastBuildDate>Thu, 22 Jun 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 07 Sep 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://erdotufa.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Open-Closed</title>
+      <link>https://erdotufa.github.io/post/open-closed/</link>
+      <pubDate>Thu, 07 Sep 2017 00:00:00 +0000</pubDate>
+      <author>tufaerdogan@gmail.com (Erdogan Tufa)</author>
+      <guid>https://erdotufa.github.io/post/open-closed/</guid>
+      <description>La O dei principi SOLID stà per Open Closed Principle (OCP), la sua definizione tradotta in italiano é la seguente:
+ Una qualsiasi entità software (classe, modulo, funzione, ecc.) dovrebbe avere meccanismi che permettono di estenderne il comportamento senza apportare modifiche al codice preesistente. Quindi Aperte alle estensioni ma chiuse alle modifiche; da qui il nome Open-Closed.
+ Questo insieme alla SRP è un&amp;rsquo;altro principio molto importante. Ma come si fa ad estendere una funzionalità senza modificare il codice esistente?</description>
+    </item>
+    
+    <item>
+      <title>Single Responsibility</title>
+      <link>https://erdotufa.github.io/post/single-responsibility/</link>
+      <pubDate>Mon, 28 Aug 2017 00:00:00 +0000</pubDate>
+      <author>tufaerdogan@gmail.com (Erdogan Tufa)</author>
+      <guid>https://erdotufa.github.io/post/single-responsibility/</guid>
+      <description>La S dei principi SOLID stà per Single Responsibility Principle (SRP), la sua definizione tradotta in italiano é la seguente:
+ Una classe dovrebbe avere uno ed unico motivo per cambiare
+ Cosa significa? Significa avere classi più piccole ognuna con una sola responsabilità! Su molti testi si trova consigliato classi di dimensioni che non superano le 100-150 righe di codice al contrario delle &amp;ldquo;God class&amp;rdquo; dove ho una classe sola che &amp;ldquo;fa tutto&amp;rdquo;, invece il consiglio è di avere il codice dove non supera la schermata vedendo tutto senza dovere scrollare col mouse.</description>
+    </item>
+    
+    <item>
+      <title>I principi SOLID</title>
+      <link>https://erdotufa.github.io/post/solid-principles/</link>
+      <pubDate>Sat, 05 Aug 2017 00:00:00 +0000</pubDate>
+      <author>tufaerdogan@gmail.com (Erdogan Tufa)</author>
+      <guid>https://erdotufa.github.io/post/solid-principles/</guid>
+      <description>Nei progetti informatici il software e la sua qualità degradano con il passare del tempo, si dice che il software marcisce (&amp;ldquo;Software Rots&amp;rdquo;). Questo degrado su molti testi di informatica viene descritto come &amp;ldquo;entropia del software&amp;rdquo;.
+A cosa é dovuto?  La maggioranza dei progetti parte da un idea apparentemente &amp;ldquo;semplice&amp;rdquo;, ed é questa la &amp;ldquo;fregatura&amp;rdquo;, perché non resta mai così! Solitamente ad inizio attività partiamo sempre tutti con un buon design pensando: stavolta non sbaglio !</description>
+    </item>
+    
+    <item>
+      <title>Liskov substitution</title>
+      <link>https://erdotufa.github.io/post/liskov-substitution/</link>
+      <pubDate>Wed, 05 Jul 2017 00:00:00 +0000</pubDate>
+      <author>tufaerdogan@gmail.com (Erdogan Tufa)</author>
+      <guid>https://erdotufa.github.io/post/liskov-substitution/</guid>
+      <description>La L dei principi SOLID stà per Liskov Substitution Principle (LSP), la sua definizione tradotta in italiano é la seguente:
+ Le classi derivate devono sempre poter essere sostituite dalle classi da cui queste derivano (superclassi) in maniera trasparente.
+ Cosa significa? Significa avere classi più piccole ognuna con una sola responsabilità! Su molti testi si trova consigliato classi di dimensioni che non superano le 100-150 righe di codice al contrario delle &amp;ldquo;God class&amp;rdquo; dove ho una classe sola che &amp;ldquo;fa tutto&amp;rdquo;, invece il consiglio è di avere il codice dove non supera la schermata vedendo tutto senza dovere scrollare col mouse.</description>
+    </item>
     
     <item>
       <title>Broken windows</title>

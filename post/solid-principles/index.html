@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>I principi SOLID</title>
+  <meta property="og:title" content="I principi SOLID" />
+  <meta name="twitter:title" content="I principi SOLID" />
+  <meta name="description" content="I principi SOLID.">
+  <meta property="og:description" content="I principi SOLID.">
+  <meta name="twitter:description" content="I principi SOLID.">
+  <meta name="author" content="Erdogan Tufa"/>
+  <link href='https://erdotufa.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="https://erdotufa.github.io/img/linkedin.png" />
+  <meta name="twitter:image" content="https://erdotufa.github.io/img/linkedin.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@erdotufa" />
+  <meta name="twitter:creator" content="@erdotufa" />
+  <meta property="og:url" content="https://erdotufa.github.io/post/solid-principles/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="BITPROGRAMMER" />
+
+  <meta name="generator" content="Hugo 0.20.7" />
+  <link rel="canonical" href="https://erdotufa.github.io/post/solid-principles/" />
+  <link rel="alternate" href="https://erdotufa.github.io/index.xml" type="application/rss+xml" title="BITPROGRAMMER">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://erdotufa.github.io/css/main.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://erdotufa.github.io/css/pygment_highlights.css" />
+  <link rel="stylesheet" href="https://erdotufa.github.io/css/highlight.min.css" />
+
+
+
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://erdotufa.github.io">BITPROGRAMMER</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        
+          <a title="BITPROGRAMMER" href="https://erdotufa.github.io">
+            <img class="avatar-img" src="https://erdotufa.github.io/img/linkedin.png" alt="BITPROGRAMMER" />
+          </a>
+        
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+    
+  
+  
+  
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+              <h1>I principi SOLID</h1>
+              
+                
+                  
+                    <h2 class="post-subheading">I principi SOLID.</h2>
+                  
+                
+                
+                  <span class="post-meta">
+  Posted on August 5, 2017
+  
+</span>
+
+
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" > 
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        
+
+<p>Nei progetti informatici il software e la sua qualità degradano con il passare del tempo, si dice che il software marcisce (&ldquo;Software Rots&rdquo;).
+Questo degrado su molti testi di informatica viene descritto come &ldquo;entropia del software&rdquo;.</p>
+
+<p>A cosa é dovuto? </br>
+La maggioranza dei progetti parte da un idea apparentemente &ldquo;semplice&rdquo;, ed é questa la &ldquo;fregatura&rdquo;, perché non resta mai così! Solitamente ad inizio attività partiamo sempre tutti con un buon design pensando: stavolta non sbaglio !</p>
+
+<p>Individuiamo qualche design pattern da utilizzare (siamo gasatissimi) ed arriviamo con orgoglio a concludere il progetto, vantandoci magari di essere dei &ldquo;clean coder&rdquo; perchè abbiamo curato il design della nostra applicazione ed abbiamo rispettato (piu o meno) tutte le tempistiche ed i requisiti.</p>
+
+<p>Quindi dove si trova la &ldquo;trappola&rdquo;???</p>
+
+<p>Non si considera mai che i requisiti cambiano o cambieranno&hellip; e cambiano sempre! La cosa peggiore é che cambiano sempre quando si pensa di avere finito e si vorrebbe cambiare attività, ed é forse questo l&rsquo;effetto più devastante su di noi!</p>
+
+<p>Ma cosa accede veramente?
+Ci sono vari scenari possibili, in seguito ne elenco alcuni.</p>
+
+<p>Un possibile scenario potrebbe essere il nostro capo che prima aveva visto il nostro lavoro sempre di sfuggita non dedicandoci mai l&rsquo;attenzione necessaria e cambia idea dopo averlo visto e provato più attentamente; ovviamente quando pensiamo di avere finito.
+Oppure cambia idea il management che fino a quel momento non aveva mai visto l&rsquo;applicazione. Oppure arrivano i primi feedback dagli utenti che iniziano ad utilizzare il prodotto chiedendo:
+si potrebbe aggiungere questo? Servirebbe quell&rsquo;altro, sarebbe utile se si potesse fare anche questa cosa! </br>
+Se si tratta di un applicazione interna finiamo per odiare i nostri colleghi, tanto da cambiare direzione se li incrociamo nei corridoi per evitare che ci fanno altre nuove richieste.
+Una sola domanda ruota nella nostra mente: perché sempre alla fine???</p>
+
+<p>Cosa possiamo fare per evitare questo problema?</p>
+
+<p>Riprendo un esempio molto divertente dal libro Agile principles e patterns che &ldquo;Uncle Bob&rdquo; ce lo descrive cosi: (ovviamente il tutto viene raccontato in modo esagerato ed in alcune parti l&rsquo;ho modificato rispetto al originale)</p>
+
+<h2 id="the-copy-program">The copy program</h2>
+
+<p>La settimana inizia subito con un nuovo progetto, il nostro capo viene da noi e ci chiede di fare un programma che legge i caratteri digitati sulla tastiera e li invia alla stampante.
+Avete un po di tempo ed iniziate a pensare a come potrebbe essere il design della nuova applicazione. Poco dopo vi ricordate che dovete partecipare ad un meeting di lunga durata e lasciate la scrivania per andarci. Al pomeriggio ci attente un altro stand-up meeting che si allunga più del dovuto e la prima giornata termina&hellip;però siamo soddisfatti perché riusciti ad effetuare il primo step, quello del design.</p>
+
+<p>Martedì decidiamo di recarci presto in ufficio per evitare distrazioni ed iniziare a lavorare sul nostro programma. Creiamo il progetto e scrivamo le seguenti 10 righe di codice molto soddisfatti.</p>
+
+<pre><code class="language-C#">public class Copier
+{
+    public static void Copy()
+    {
+        int c;
+        while((c=Keyboard.Read()) != -1)
+            Printer.Write(c);
+    }
+}
+</code></pre>
+
+<p>Il tempo di fare il primo salvataggio, ricordiamo di essere in ritardo per un importantissimo &ldquo;quality-meeting&rdquo; quindi lasciamo l&rsquo;ufficio un altra volta e nella fretta ci prendiamo anche un caffé per concigliare il sonno durante il meeting.</p>
+
+<p>Mercoledì decidiamo di arrivare ancora presto in ufficio per provare se il nostro programma funziona. Accendiamo il pc, facciamo partire tutte le nostre applicazioni, apriamo il nostro source code editor preferito e carichiamo il progetto. Il tutto compila per la prima volta senza nemmeno un errore, Woow una cosa che non succede spesso. Ma il trionfo dura poco il nostro capo ci chiama per un meeting improvviso non schedulato&hellip;</p>
+
+<p>Giovedì passiamo la mattinata nel capire il problema di un cliente tra debugging e log. Finalmente riusciamo a lanciare il nostro programma che funziona al primo tentativo. Hoho esultiamo di nuovo, funziona al primo colpo! Ma improvvisamente veniamo interrotti nuovamente perché, uno stagista ha cancellato il master source code dal server. Ovviamente l&rsquo;ultimo backup risale a 3 mesi prima e, ci sono 94 backup incrementali da ripristinare.</p>
+
+<p>Venerdì giornata libera e finalmente nonstante la stanchezza settimanale riusciamo a testare il programma e deployarlo in produzione. Un altra volta la nostra reputazione di programmatore d&rsquo;asso e salva!!</p>
+
+<p>Come si diceva precedentemente i requisiti cambiano sempre!
+Qualche mese dopo il nostro capo viene da noi e ci chiede di modificare il nostro programma facendo in modo che le letture vengano effettuate da schede perforate (tecnologia all&rsquo;avanguardia)invece che dalla tastiera. Ci pensiamo su un attimo e gli rispondiamo che il nostro programma non era stato pensato per essere usato con le schede perforate, modificarlo rovinerebbe l&rsquo;eleganza del nostro codice che siamo contrari a questa modifica, e lui ribatte che questa modifica e strettamente necessaria perchè gli utenti ne hanno veramente bisogno.</p>
+
+<p>A questo punto parte una lunga riflessione, potrei copiare il codice e creare una nuova funzione molto simile ma violerei il principio DRY e vorrei evitarlo, passare un parametro alla funzione sarebbe una soluzione migliore ma dopo un indagine scopriamo che altri in azienda hanno utilizzato il nostro codice come API per costruire altri programmi quindi modificare l&rsquo;interfaccia implicherebbe una modifica e ricompilazione e il testing di tutti i prodotti che hanno usato il nostro codice, settimane di lavoro per una modifica anche questa soluzione non sembra percorribile. Ci viene in mente una soluzione mettiamo una booleana globale la ptFlag se impostata la lettura viene effettuata da lettore schede altrimenti dalla tastiera. L&rsquo;interfaccia non é cambiata l&rsquo;esistente continua a funzionare e chi vuole utilizzare questa nuova funzionalità basta che imposta la globale ed il gioco e fatto. Riguardo il codice e mi convinco che in fondo la modifica non é cosi invasiva e decido di mantenerla.</p>
+
+<pre><code class="language-C#">public class Copier
+{
+    //remember to reset this flag
+    public static bool ptFlag = false;
+    public static void Copy()
+    {
+        int c;
+        while((c=(ptFlag ? PaperTape.Read() : Keyboard.Read())) != -1)
+            Printer.Write(c);
+    }
+}
+</code></pre>
+
+<p>Nelle settimane successive il nostro capo si ripresenta nuovamente e ci informa che i nostri clienti hanno la necessità di stampare su schede perforate invece che sulla stampante. Cosi come lo abbiamo modificato la volta precedente di farlo anche stavolta non gli importa del nostro design per portare avanti il business serve anche questa modifica! Ahhhh i clienti se non ci fossero loro a rovinarci i design delle nostre applicazioni sarebbe tutto più semplice.</p>
+
+<p>Stufo di questo progetto metto una seconda booleana e anche questa e fatta.</p>
+
+<pre><code class="language-C#">public class Copier
+{
+    //remember to reset these flags
+    public static bool ptFlag = false;
+    public static bool punchFlag = false;
+    public static void Copy()
+    {
+        int c;
+        while((c=(ptFlag ? PaperTape.Read() : Keyboard.Read())) != -1)
+            punchFlag ? PaperTape.Punch(c) : Printer.Write(c);
+    }
+}
+
+</code></pre>
+
+<p>Ora se ci fermiamo a riflettere un attimo il nostro software é gia degradato dopo appena 2 modifiche. Cosa succederebbe se arrivasse un altra richiesta di lettura e scrittura da un altro device? Il nostro programma anche se di poche righe di codice inizierebbe ad avere una complessita di condizioni con And e Or difficile da gestire e a questo bisogna aggiungere quella di configurazione iniziale mettere uno a true l&rsquo;altro a false. Ogni buon programmatore sa che aggiungere delle condizioni come quelle non sono mai una buona soluzione ma con la scusa delle fretta finiamo tutti (o quasi) per farlo.</p>
+
+<p>Ma quindi come si fa a gestire questo tipo di problema?</p>
+
+<p>L&rsquo;errore lo abbiamo fatto quando é stata inserita la prima booleana. Una booleana inserisce una condizione mentre quello che dobbiamo fare é cercare un astrazione.
+L&rsquo;esempio riportato di sotto nel libro viene definito come Agile design</p>
+
+<pre><code class="language-C#">public interface Reader
+{
+    int Read();
+}
+public class KeyboardReader : Reader
+{
+    public int Read() {return Keyboard.Read();}
+}
+public class Copier
+{
+    public static Reader reader = new KeyboardReader();
+    public static void Copy()
+    {
+        int c;
+        while((c=(reader.Read())) != -1)
+            Printer.Write(c);
+    }
+}
+</code></pre>
+
+<p>Infatti sarebbe bastato introdurre una piccola astrazione, invece che leggere direttamente dalla tastiera si potrebbe passare dal interfaccia Reader. A questo punto il nostro codice non sa se le letture vengono fatte dalla tastiera o dal lettore di schede perforate sa che ci sarà una classe con la responsabilita di leggere e di ritornare un int perché in fondo quello che interessa a noi non é avere informazioni sul tipo di lettore. Con questa soluzione il nostro programma e facilmente estendibile a qualsiasi tipo di lettore, é sufficiente creare una nuova classe che incapsula la funzionalità di lettura di un nuovo device implementando l&rsquo;interfaccia Reader. Questa soluzione inoltre permette ad altri team di utilizzare il nostro Copier implementando l&rsquo;interfaccia Reader all&rsquo;interno del proprio progetto senza dover attendere che questa estensione venga implementata da noi.</p>
+
+<p>Per combattere l&rsquo;entropia del software, lo stesso autore del libro ovvero &ldquo;lo zio Bob Martin&rdquo; ha coniato l&rsquo;acronimo S.O.L.I.D. mettendo insieme principi già esistenti.
+Il SOLID non é un pattern o la soluzione a tutti i problemi del software ma sono dei principi/regole indipendenti dal linguaggio di programmazione che ci aiutano a creare un agile design come quello del esempio precedent.</p>
+
+<p>L&rsquo;acronimo SOLID sta per :</p>
+
+<ul>
+<li><a href="/post/single-responsibility">Single Responsibility Principle (SRP)</a></li>
+<li><a href="/post/open-closed">Open-Closed Principle (OCP)</a></li>
+<li>Liskov Substitution Principle (LSP)</li>
+<li>Interface Segregation Principle (ISP)</li>
+<li>Dependency Inversion Principle (DIP)</li>
+</ul>
+
+<p>Attenzione il SOLID é una delle possibili tecniche per combattere l&rsquo;entropia del software non é l&rsquo;unico. Un&rsquo;altra tecnica ad esempio é il Domain Driven Design(DDD)</p>
+
+      </article>
+
+      <ul class="pager blog-pager">
+        
+          <li class="previous">
+            <a href="https://erdotufa.github.io/post/liskov-substitution/" data-toggle="tooltip" data-placement="top" title="Liskov substitution">&larr; Previous Post</a>
+          </li>
+        
+        
+          <li class="next">
+            <a href="https://erdotufa.github.io/post/single-responsibility/" data-toggle="tooltip" data-placement="top" title="Single Responsibility">Next Post &rarr;</a>
+          </li>
+        
+      </ul>
+
+      
+        
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:tufaerdogan@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/erdotufa" title="Facebook">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/erdotufa" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/erdotufa" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/erdogan-tufa" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="https://erdotufa.github.io/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          Erdogan Tufa
+          &nbsp;&bull;&nbsp;
+          2017
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://erdotufa.github.io">BITPROGRAMMER</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="http://gohugo.io">Hugo v0.20.7</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://erdotufa.github.io/js/main.js"></script>
+<script src="https://erdotufa.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> renderMathInElement(document.body); </script>
+
+
+
+
+
+
+  </body>
+</html>
+

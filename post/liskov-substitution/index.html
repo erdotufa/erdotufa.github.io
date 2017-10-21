@@ -5,9 +5,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Tags</title>
-  <meta property="og:title" content="Tags" />
-  <meta name="twitter:title" content="Tags" />
+  <title>Liskov substitution</title>
+  <meta property="og:title" content="Liskov substitution" />
+  <meta name="twitter:title" content="Liskov substitution" />
+  <meta name="description" content="La teoria delle finestre rotte.">
+  <meta property="og:description" content="La teoria delle finestre rotte.">
+  <meta name="twitter:description" content="La teoria delle finestre rotte.">
   <meta name="author" content="Erdogan Tufa"/>
   <link href='https://erdotufa.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
   <meta property="og:image" content="https://erdotufa.github.io/img/linkedin.png" />
@@ -15,12 +18,12 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@erdotufa" />
   <meta name="twitter:creator" content="@erdotufa" />
-  <meta property="og:url" content="https://erdotufa.github.io/tags/" />
+  <meta property="og:url" content="https://erdotufa.github.io/post/liskov-substitution/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="BITPROGRAMMER" />
 
   <meta name="generator" content="Hugo 0.20.7" />
-  <link rel="canonical" href="https://erdotufa.github.io/tags/" />
+  <link rel="canonical" href="https://erdotufa.github.io/post/liskov-substitution/" />
   <link rel="alternate" href="https://erdotufa.github.io/index.xml" type="application/rss+xml" title="BITPROGRAMMER">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -101,19 +104,59 @@
 
 
   
+    <div id="header-big-imgs" data-num-img=1 data-img-src-1="https://erdotufa.github.io/img/james-sutton-195612.jpg" data-img-desc-1="Broken windows"></div>
+  
 
-  <header class="header-section ">
+  <header class="header-section has-img">
+    
+      <div class="intro-header big-img">
+        
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+              <div class="post-heading">
+                <h1>Liskov substitution</h1>
+                  
+                    
+                      <h2 class="post-subheading">La teoria delle finestre rotte.</h2>
+                    
+                  
+                  
+                    <span class="post-meta">
+  Posted on July 5, 2017
+  
+</span>
+
+
+                  
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="img-desc" style="display: inline;"></span>
+      </div>
     
     <div class="intro-header no-img">
       
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <div class="page-heading">
+            <div class="post-heading">
               
-              <h1>Tags</h1>
+              <h1>Liskov substitution</h1>
               
                 
+                  
+                    <h2 class="post-subheading">La teoria delle finestre rotte.</h2>
+                  
+                
+                
+                  <span class="post-meta">
+  Posted on July 5, 2017
+  
+</span>
+
+
                 
             </div>
           </div>
@@ -124,26 +167,81 @@
 
 
     
-  
-  <div class="container" role="main">
-    <article class="post-preview">
-      <div class="list-group col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3">
+<div class="container" > 
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>La L dei principi SOLID stà per Liskov Substitution Principle (LSP), la sua definizione tradotta in italiano é la seguente:</p>
+
+<blockquote>
+<p>Le classi derivate devono sempre poter essere sostituite dalle classi da cui queste derivano (superclassi) in maniera trasparente.</p>
+</blockquote>
+
+<p>Cosa significa?
+Significa avere classi più piccole ognuna con una sola responsabilità! Su molti testi si trova consigliato classi di dimensioni che non superano le 100-150 righe di codice al contrario delle &ldquo;God class&rdquo; dove ho una classe sola che &ldquo;fa tutto&rdquo;, invece il consiglio è di avere il codice dove non supera la schermata vedendo tutto senza dovere scrollare col mouse.</p>
+
+<p>I vantaggi della SRP sono:</p>
+
+<ul>
+<li>Polimorfismo</li>
+<li>Strategy</li>
+<li>Decorator (interceptor)</li>
+<li>Visitor (double dispatch)</li>
+<li>Plugin</li>
+<li>Publish–subscribe</li>
+</ul>
+
+<p>Un esempio molto efficace che spiega del perché della granularità più fine delle classi é quello della differenza tra il Duplo [link] e i lego [link semmann].
+I Duplo sono dei pezzi di lego ma molto più grossi adatti a bambini dai 3-5 anni; sono stati pensati appositamente per bambini più piccoli dove la loro forma più grande ed incastri più grossi (Interfacce!) ne facilitano l&rsquo;uso per i bambini piccoli dove nonstante l&rsquo;età riescono a costruire qualcosa. I lego invece sono pezzi molto più piccoli (SRP) adatti a bambini più grandi (anche quelli cresciuti come il sottoscritto). La loro granularità più fine rispetto ai Duplo mi permette di creare forme molto più complesse a parità di dimensioni.</p>
+
+<p>Molte persone si chiedono se creare classi più piccole quindi un numero maggiore di oggetti da gestire non crea un &ldquo;overhead&rdquo; nello sviluppo del progetto! Dipende molto dal tipo di progetto che si affronta, ovvero se il progetto ha una dimensione ridotta, evoluzione e manutenzione molto bassa nel tempo, allora si é un &ldquo;overhead&rdquo;! Se invece il progetto al contrario ha una durata molto lunga, continua evoluzione e non si effettua il refactoring pensando anche alla SRP sovente il progetto acquisisce una complessità dove diventa difficile da mantenere, ad ogni richiesta di Business su nuove funzionalità la nostra risposta diventa:</p>
+
+<blockquote>
+<p>é un casino!!</p>
+</blockquote>
+
+<p>Mai successo? Codice sparso per il progetto invece che nelle loro classi di responsabilità? Codice puplicato che viola il principio DRY[]?</p>
+
+<p>Seguire l&rsquo;SRP ci aiuta a ragruppare il codice &ldquo;sparso&rdquo; che non sapevamo dove mettere oppure si eliminano tutte quelle classi di Utils difficili da trovare e sovente dupplicati perché non ci si ricorda di averlo già fatto oppure é stato fatto da altre persone del team. Le classi di Utils hanno un grosso svantaggio bisogna ricordarsi dove si trovano si fa affidamento sulla memoria dei developer e questa é una pessima idea.
+Quando usiamo un API fare . sul oggetto e trovare immediatamente la funzionalità che stavamo cercando non é più semplice ed immediato?</p>
+
+<p>Eric Evans nel suo Domain Driven Design (DDD) ci dice esattamente questo ovvero di mettere il Behaviour e la logica all&rsquo;interno del oggetto stesso!</p>
+
+<p>Concludo l&rsquo;articolo con una domanda:</p>
+
+<p>preferite giocare con i duplo o i lego?</p>
+
+<p>Una possibile tecnica di riparazione potrebbe essere applicare la <a href="/post/boy-scout-rule">Boy Scout Rule</a></p>
+
+<p>Libro dei principi</p>
+
+<p><a href="https://it.wikipedia.org/wiki/Teoria_delle_finestre_rotte">https://it.wikipedia.org/wiki/Teoria_delle_finestre_rotte</a>
+<a href="http://www.unitresorrentina.org/foto/24-forum/85-la-teoria-delle-finestre-rotte">http://www.unitresorrentina.org/foto/24-forum/85-la-teoria-delle-finestre-rotte</a></p>
+
+<p>Image <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px;" href="http://unsplash.com/@jamessutton_photography?utm_campaign=photographer-credit" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from James Sutton"><span style="display:inline-block;padding:2px 3px;"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-1px;fill:white;" viewBox="0 0 32 32"><title></title><path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path></svg></span><span style="display:inline-block;padding:2px 3px;">James Sutton</span></a></p>
+
+      </article>
+
+      <ul class="pager blog-pager">
+        
+          <li class="previous">
+            <a href="https://erdotufa.github.io/post/broken-windows/" data-toggle="tooltip" data-placement="top" title="Broken windows">&larr; Previous Post</a>
+          </li>
+        
+        
+          <li class="next">
+            <a href="https://erdotufa.github.io/post/solid-principles/" data-toggle="tooltip" data-placement="top" title="I principi SOLID">Next Post &rarr;</a>
+          </li>
+        
+      </ul>
+
       
-      <a href="/tags/clean-code" class="list-group-item">
-          clean-code<span class="badge">6</span></a>
+        
       
-      <a href="/tags/software-entropy" class="list-group-item">
-          software-entropy<span class="badge">6</span></a>
-      
-      <a href="/tags/refactoring" class="list-group-item">
-          refactoring<span class="badge">5</span></a>
-      
-      <a href="/tags/solid" class="list-group-item">
-          solid<span class="badge">4</span></a>
-      
-      </div>
-    </article>
+
+    </div>
   </div>
+</div>
 
     <footer>
   <div class="container">
