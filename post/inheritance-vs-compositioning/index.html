@@ -5,12 +5,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Broken windows</title>
-  <meta property="og:title" content="Broken windows" />
-  <meta name="twitter:title" content="Broken windows" />
-  <meta name="description" content="La teoria delle finestre rotte.">
-  <meta property="og:description" content="La teoria delle finestre rotte.">
-  <meta name="twitter:description" content="La teoria delle finestre rotte.">
+  <title>Ereditarietà VS Composizione</title>
+  <meta property="og:title" content="Ereditarietà VS Composizione" />
+  <meta name="twitter:title" content="Ereditarietà VS Composizione" />
+  <meta name="description" content="Inheritance VS Compositioning">
+  <meta property="og:description" content="Inheritance VS Compositioning">
+  <meta name="twitter:description" content="Inheritance VS Compositioning">
   <meta name="author" content="Erdogan Tufa"/>
   <link href='https://erdotufa.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
   <meta property="og:image" content="https://erdotufa.github.io/img/linkedin.png" />
@@ -18,12 +18,12 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@erdotufa" />
   <meta name="twitter:creator" content="@erdotufa" />
-  <meta property="og:url" content="https://erdotufa.github.io/post/broken-windows/" />
+  <meta property="og:url" content="https://erdotufa.github.io/post/inheritance-vs-compositioning/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="BITPROGRAMMER" />
 
   <meta name="generator" content="Hugo 0.20.7" />
-  <link rel="canonical" href="https://erdotufa.github.io/post/broken-windows/" />
+  <link rel="canonical" href="https://erdotufa.github.io/post/inheritance-vs-compositioning/" />
   <link rel="alternate" href="https://erdotufa.github.io/index.xml" type="application/rss+xml" title="BITPROGRAMMER">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -104,37 +104,8 @@
 
 
   
-    <div id="header-big-imgs" data-num-img=1 data-img-src-1="https://erdotufa.github.io/img/james-sutton-195612.jpg" data-img-desc-1="Broken windows"></div>
-  
 
-  <header class="header-section has-img">
-    
-      <div class="intro-header big-img">
-        
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-              <div class="post-heading">
-                <h1>Broken windows</h1>
-                  
-                    
-                      <h2 class="post-subheading">La teoria delle finestre rotte.</h2>
-                    
-                  
-                  
-                    <span class="post-meta">
-  Posted on June 22, 2017
-  
-</span>
-
-
-                  
-              </div>
-            </div>
-          </div>
-        </div>
-        <span class="img-desc" style="display: inline;"></span>
-      </div>
+  <header class="header-section ">
     
     <div class="intro-header no-img">
       
@@ -143,16 +114,16 @@
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="post-heading">
               
-              <h1>Broken windows</h1>
+              <h1>Ereditarietà VS Composizione</h1>
               
                 
                   
-                    <h2 class="post-subheading">La teoria delle finestre rotte.</h2>
+                    <h2 class="post-subheading">Inheritance VS Compositioning</h2>
                   
                 
                 
                   <span class="post-meta">
-  Posted on June 22, 2017
+  Posted on June 14, 2018
   
 </span>
 
@@ -171,45 +142,67 @@
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        <p>La teoria della finestra rotta è basata su un esperimento di psicologia sociale condotto nel 1969 dal professor Philip Zimbardo presso l&rsquo;Università di Stanford.
-Egli mise due auto identiche abbandonate una nel Bronx e l&rsquo;altra a Palo Alto.
-Quella nel Bronx venne smantellata nel giro di poche ore, mentre quella di Palo Alto rimase intatta.
-Allora i ricercatori decisero di fare un&rsquo;altra prova rompendo un vetro del auto intatta e nel giro di poco tempo il risultato di degrado fu lo stesso di quella del Bronx.
-Il risultato del esperimento è che non è solo la povertà a creare del crimine, ma qualcosa che ha a che fare con la psicologia, col comportamento umano e con le relazioni sociali.
-In assenza di norme, di regole se questi piccoli “difetti” o errori non sono puniti o riparati, si svilupperanno “difetti maggiori” e poi i crimini più gravi.</p>
-
-<p>Secondo Zimbardo, il finestrino rotto dell’automobile costituisce un indizio di abbandono dell’area, il quale a sua volta è in grado di svegliare in noi peggiori istinti, forti del fatto che difficilmente verremmo giudicati o puniti.</p>
-
-<p>La stessa cosa accade nel software. Come? Se si effettua un software-hack ad esempio anche temporaneo pensando, poi lo sistemo a breve, oppure, si &ldquo;prende una determinata strada&rdquo; pur sapendo che è quella sbagliata (lo si fa per la fretta o non ci si vuole sforzare in quel momento a creare un design migliore) succede soventemente che altri sviluppatori del team utilizzano quella strada/tecnica/codice costruendoci sopra la soluzione e dando quindi il via al degrado proprio come accade con la broken window. Il più delle volte ci si accorge troppo tardi, quando il danno ormai è fatto!
-Una frase tipica che pronunciamo è: mmmhhhh questa soluzione non è il massimo ma adesso non ho tempo lo sistemerò la prossima volta; la prossima volta diventa la prossima ancora finchè un giorno non si arriva al limite e si decide di aprire il &ldquo;Vaso di pandora&rdquo;.
-La riparazione al &ldquo;danno&rdquo; sovente non è immediata, adirittura il rischio di doverlo lasciare cosi per sempre è molto alto a causa della complessità che si e creata nel tempo.
-Quest&rsquo;ultimo Micheal Sinz lo riassume cosi:</p>
+        <p>Una domanda che affligge la nostra mente da developer da molti anni è questa:</p>
 
 <blockquote>
-<p>Programming is like sex&hellip;One mistake and you have to support it for the rest of your life!</p>
+<p>Devo ereditare o comporre?</p>
 </blockquote>
 
-<p>La teoria ci dice di non lasciare finestre rotte ma di ripararle al più presto per evitare ulteriori degradi. Si riesce sempre a farlo? Dipende sempre da noi? Commentate</p>
+<p>Ho sempre visto molta confusione su questo argomento tra programmatori io stesso mi ero trovato in questa situazione.</p>
 
-<p>Una possibile tecnica di riparazione potrebbe essere applicare la <a href="/post/boy-scout-rule">Boy Scout Rule</a></p>
+<blockquote>
+<p>Perché accade ciò?</p>
+</blockquote>
 
-<p><a href="https://it.wikipedia.org/wiki/Teoria_delle_finestre_rotte">https://it.wikipedia.org/wiki/Teoria_delle_finestre_rotte</a>
-<a href="http://www.unitresorrentina.org/foto/24-forum/85-la-teoria-delle-finestre-rotte">http://www.unitresorrentina.org/foto/24-forum/85-la-teoria-delle-finestre-rotte</a></p>
+<p>Provo a dare una spiegazione in base alla mia personale esperienza. Quando si passa da semplici &ldquo;smanettoni&rdquo; di codice a una programmazione più &ldquo;seria&rdquo; si inizia a leggere libri di Clean Code, seguire blog di tizio e caio, andare alle conferenze,
+ecc., si finisce sempre in esempi dove viene fatto vedere che l&rsquo;ereditarietà (sto parlando di linguaggi dove la multi ereditarietà non è permessa) crea complessità, trasformarlo in composizione semplifica il nostro design e favorisce il riutilizzo del codice; si conclude che la composizione è molto meglio dell&rsquo;ereditarietà.</p>
 
-<p>Image <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px;" href="http://unsplash.com/@jamessutton_photography?utm_campaign=photographer-credit" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from James Sutton"><span style="display:inline-block;padding:2px 3px;"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-1px;fill:white;" viewBox="0 0 32 32"><title></title><path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path></svg></span><span style="display:inline-block;padding:2px 3px;">James Sutton</span></a></p>
+<p>Yahoooo pensate ho trovato finalmente un &ldquo;Silver Bullet&rdquo;a questo problema!
+Il primo pensiero che vi passa per la testa è devo fare refactoring di tutto ma spesso questo non è possibile (per fortuna), allora il secondo pensiero diventa nella prossima attività di sviluppo farò cosi!!!</p>
+
+<p>Inizia un nuovo ciclo di sviluppo ed entusiasti si parte a fare tutto a composizione,ma, ad un certo punto ci si accorge che qualcosa non va, sembra che bisogna forzare il design e ci si accorge che il nostro sistema a lego non si &ldquo;incastra&rdquo; come pensavamo! Mai capitato?
+Se anche voi avete avuto questa sensazione significa che avete sbagliato pensiero esattamente come me!!!</p>
+
+<blockquote>
+<p>Cosa è successo??</p>
+</blockquote>
+
+<p>Semplice abbiamo sbagliato astrazione!
+Ci sono situazioni in cui l&rsquo;ereditarietà e più corretta in altre la composizione.</p>
+
+<blockquote>
+<p>E quindi come ne veniamo fuori?</p>
+</blockquote>
+
+<p>Esiste una soluzione molto semplice (che probabilmente già conosci ma sul momento quanto sei davanti al problema non ti viene in mente) basta farsi la domanda il mio oggetto È un/una, oppure Ha quindi e composto (Is A, Has A) durante la modellazione.
+Se pensiamo al classico esempio da libro, dove abbiamo la classe Gatto che eredita da Animale, per capire quale è più corretto usare basta chiedersi:
+il gatto è un animale oppure il gatto ha un animale? Ecco che immediatamente si intuisce che uno dei due non ha nessun senso.
+Ma questo è un caso semplice direte, ci sono situazioni dove non è così ovvio!
+In situazioni dove non si riesce a dare la risposta immediatamente un altro modo è chiedersi:</p>
+
+<blockquote>
+<p>La mia classe o componente software Foo avrebbe modo di esistere da sola?
+La posso utilizzare in modo indipendente? Ha una sua forte identità?
+Se si allora è più favorevole alla composizione,  altrimenti è un astrazione!</p>
+</blockquote>
+
+<p>Riprendendo l&rsquo;esempio della classe Animale si capisce immediatamente che non può essere usata come classe indipendente perché non esiste concettualmente ma è solo un’astrazione quindi l&rsquo;ereditarietà e quella più corretta come soluzione!</p>
+
+<p>Se invece si pensa alla classe Logger questa ha una propria identità quella di scrivere il Log ed è indipendente, quindi ha senso che venga utilizzata in composizione per essere iniettata in altri servizi/classi.
+Un esempio semplice per capire il principio di composizione è pensare ad un’automobile. L&rsquo;automobile è una composizione di diverse parti meccaniche tra qui motore, telaio, carrozzeria, ruote ecc., ed ognuna di queste parti può essere rimpiazzata da altre; ad esempio la stessa identica auto può essere costruita con un motore di cilindrata maggiore, lo stesso per le ruote (importante è che viene mantenuto lo stesso interfacciamento), ed allo stesso tempo le varie parti possono comporre anche altre auto di marche o modelli o altri veicoli completamente differenti. Questo principio è conosciuto come Dependendcy Inversion.</p>
+
+<p>Esistono situazioni invece dove la mia classe utilizza tutti e due i metodi ovvero eredita determinate funzionalità e viene composta da altre,
+un esempio classico (ma che nessuno ci pensa perché troppi ovvio) è quella del Controller di un API web, dove eredito dalla classe base ApiController ad esempio
+e mi faccio iniettare i servizi come quella del Logger dal Dependency Resolver (o Dependency Injection Container).</p>
 
       </article>
 
       <ul class="pager blog-pager">
         
           <li class="previous">
-            <a href="https://erdotufa.github.io/post/boy-scout-rule/" data-toggle="tooltip" data-placement="top" title="Boy Scout Rule!">&larr; Previous Post</a>
+            <a href="https://erdotufa.github.io/post/open-closed/" data-toggle="tooltip" data-placement="top" title="Open-Closed">&larr; Previous Post</a>
           </li>
         
-        
-          <li class="next">
-            <a href="https://erdotufa.github.io/post/solid-principles/" data-toggle="tooltip" data-placement="top" title="I principi SOLID">Next Post &rarr;</a>
-          </li>
         
       </ul>
 

@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>tufaerdogan@gmail.com (Erdogan Tufa)</managingEditor>
     <webMaster>tufaerdogan@gmail.com (Erdogan Tufa)</webMaster>
-    <lastBuildDate>Thu, 07 Sep 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 14 Jun 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://erdotufa.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,9 +15,18 @@
     <item>
       <title>Clean Code</title>
       <link>https://erdotufa.github.io/tags/clean-code/</link>
-      <pubDate>Thu, 07 Sep 2017 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 14 Jun 2018 00:00:00 +0000</pubDate>
       <author>tufaerdogan@gmail.com (Erdogan Tufa)</author>
       <guid>https://erdotufa.github.io/tags/clean-code/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dependency Inversion</title>
+      <link>https://erdotufa.github.io/tags/dependency-inversion/</link>
+      <pubDate>Thu, 14 Jun 2018 00:00:00 +0000</pubDate>
+      <author>tufaerdogan@gmail.com (Erdogan Tufa)</author>
+      <guid>https://erdotufa.github.io/tags/dependency-inversion/</guid>
       <description></description>
     </item>
     
@@ -27,6 +36,15 @@
       <pubDate>Thu, 07 Sep 2017 00:00:00 +0000</pubDate>
       <author>tufaerdogan@gmail.com (Erdogan Tufa)</author>
       <guid>https://erdotufa.github.io/tags/refactoring/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Software Design</title>
+      <link>https://erdotufa.github.io/tags/software-design/</link>
+      <pubDate>Thu, 14 Jun 2018 00:00:00 +0000</pubDate>
+      <author>tufaerdogan@gmail.com (Erdogan Tufa)</author>
+      <guid>https://erdotufa.github.io/tags/software-design/</guid>
       <description></description>
     </item>
     
