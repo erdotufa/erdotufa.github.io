@@ -171,7 +171,7 @@
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        <p>Un problema ricorrente nello sviluppo sono le concatenazioni delle operazioni e si finisce frequentemente nello stesso punto/metodo/funzione!</p>
+        <p>Un problema ricorrente nello sviluppo sono le concatenazioni delle operazioni dove si finisce frequentemente nello stesso punto/metodo/funzione!</p>
 
 <p>Solitamente accade questo:</p>
 
@@ -188,10 +188,10 @@ Ci può essere un punto solo dove gestire/aggiungere una funzionalità solo se q
 <p>La cosa più importante è, avere layer/moduli ben organizzati dove ritroviamo facilmente queste &ldquo;pseudo&rdquo; duplicazioni e si possono rivedere e refactorizzare più facilmente essendo isolate, piuttosto che avere un metodo imbuto ingestibile, oppure, logiche simili sparse in giro per il progetto!</p>
 
 <p>Una tecnica molto apprezzata e quella del <a href="https://martinfowler.com/bliki/FluentInterface.html">fluent interface</a> (attenzione non è il <a href="https://en.wikipedia.org/wiki/Builder_pattern">builder pattern</a>), dove si creano tante piccole funzionalità
-e si concatenano insieme per crearne altre più complesse, un pò come in una catena di montaggio dove ogni punto ha una singola responsabilità.
-Con questa tecnica se voglio escludere una parte di codice, invece di aggiungere una condizione (If) che mi esclude quella parte, creo una variante dove quel blocco non esiste nella mia catena.</p>
+e si concatenano insieme per crearne altre più complesse, un po&rsquo; come in una catena di montaggio dove ogni punto ha una singola responsabilità.
+Con questa tecnica se voglio escludere una parte di codice, invece di aggiungere una condizione (IF) che mi esclude quella parte, creo una variante dove quel blocco non esiste nella mia catena.</p>
 
-<p>L&rsquo;immagine della catena di montaggio è la più efficace per capire questa tecnica, dove posso sempre facilmente riorganizzare la mia pipeline, spostare prima o dopo le varie operazioni, aggiungerne di nuove facilmente, crearne altre parallele simili ed afficaci! Anche con questa tecnica è sempre importante mantenere le varie concatenazioni in un layer separato.</p>
+<p>L&rsquo;immagine della catena di montaggio è la più efficace per capire questa tecnica, dove posso sempre facilmente riorganizzare la mia pipeline, spostare prima o dopo le varie operazioni, aggiungerne di nuove facilmente, crearne altre parallele simili ed efficaci! Anche con questa tecnica è sempre importante mantenere le varie concatenazioni in un layer separato.</p>
 
 <p><strong>La mia conclusione è che ci troviamo sempre in queste condizioni (capita ancora anche a me) per la fretta di aggiungere nuove funzionalità
 e scarso refactoring; quando questo sintomo diventa molto frequente, si entra nell&rsquo;effetto <a href="/post/broken-windows">Broken Window</a> e nemmeno la <a href="/post/boy-scout-rule">Boyscout Rule</a> ci aiuta più!</strong></p>
