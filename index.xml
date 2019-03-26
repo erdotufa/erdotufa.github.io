@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>tufaerdogan@gmail.com (Erdogan Tufa)</managingEditor>
     <webMaster>tufaerdogan@gmail.com (Erdogan Tufa)</webMaster>
-    <lastBuildDate>Thu, 21 Jun 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 25 Mar 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://erdotufa.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Sindrome da Framework Developer</title>
+      <link>https://erdotufa.github.io/post/sindrome-framework-developer/</link>
+      <pubDate>Mon, 25 Mar 2019 00:00:00 +0000</pubDate>
+      <author>tufaerdogan@gmail.com (Erdogan Tufa)</author>
+      <guid>https://erdotufa.github.io/post/sindrome-framework-developer/</guid>
+      <description>Dopo un pò di esperienza noi sviluppatori ci sentiamo come i supereroi, iniziamo qualche lettura di libri su design patterns, clean code, seguire blog, twitter o personaggi famosi conosciuti durante qualche conferenza; dimenticando completamente di avere un proprio cervello da usare, e di un&amp;rsquo;altra cosa molto importante, ovvero:
+ il contesto in cui ci troviamo ed il nostro tipo di prodotto!!!
+ Presi dall&amp;rsquo;entusiasmo iniziamo a pensare a tutto con design patterns ed a sviluppare qualsiasi cosa pensando come se fosse un framework.</description>
+    </item>
     
     <item>
       <title>Metodi imbuto</title>

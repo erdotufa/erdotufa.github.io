@@ -5,12 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Metodi imbuto</title>
-  <meta property="og:title" content="Metodi imbuto" />
-  <meta name="twitter:title" content="Metodi imbuto" />
-  <meta name="description" content="Faccio tutto io!">
-  <meta property="og:description" content="Faccio tutto io!">
-  <meta name="twitter:description" content="Faccio tutto io!">
+  <title>Design Patterns</title>
+  <meta property="og:title" content="Design Patterns" />
+  <meta name="twitter:title" content="Design Patterns" />
   <meta name="author" content="Erdogan Tufa"/>
   <link href='https://erdotufa.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
   <meta property="og:image" content="https://erdotufa.github.io/img/linkedin.png" />
@@ -18,12 +15,12 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@erdotufa" />
   <meta name="twitter:creator" content="@erdotufa" />
-  <meta property="og:url" content="https://erdotufa.github.io/post/metodi-imbuto/" />
+  <meta property="og:url" content="https://erdotufa.github.io/tags/design-patterns/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="BITPROGRAMMER" />
 
   <meta name="generator" content="Hugo 0.20.7" />
-  <link rel="canonical" href="https://erdotufa.github.io/post/metodi-imbuto/" />
+  <link rel="canonical" href="https://erdotufa.github.io/tags/design-patterns/" />
   <link rel="alternate" href="https://erdotufa.github.io/index.xml" type="application/rss+xml" title="BITPROGRAMMER">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -96,68 +93,14 @@
 
 
     
-  
-  
-  
-
-
-
-
-  
-    <div id="header-big-imgs" data-num-img=1 data-img-src-1="https://erdotufa.github.io/img/xiang-hu-322627-unsplash.jpg" data-img-desc-1="The funnel"></div>
-  
-
-  <header class="header-section has-img">
-    
-      <div class="intro-header big-img">
-        
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-              <div class="post-heading">
-                <h1>Metodi imbuto</h1>
-                  
-                    
-                      <h2 class="post-subheading">Faccio tutto io!</h2>
-                    
-                  
-                  
-                    <span class="post-meta">
-  Posted on June 21, 2018
-  
-</span>
-
-
-                  
-              </div>
-            </div>
-          </div>
-        </div>
-        <span class="img-desc" style="display: inline;"></span>
-      </div>
-    
+  <header class="header-section " >
     <div class="intro-header no-img">
-      
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <div class="post-heading">
-              
-              <h1>Metodi imbuto</h1>
-              
-                
-                  
-                    <h2 class="post-subheading">Faccio tutto io!</h2>
-                  
-                
-                
-                  <span class="post-meta">
-  Posted on June 21, 2018
-  
-</span>
-
-
-                
+            <div class="page-heading">
+              <h1>#Design Patterns</h1>
+              <hr class="small">
             </div>
           </div>
         </div>
@@ -165,62 +108,55 @@
     </div>
   </header>
 
-
     
-<div class="container" > 
-  <div class="row">
-    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-      <article role="main" class="blog-post">
-        <p>Un problema ricorrente nello sviluppo sono le concatenazioni delle operazioni dove si finisce frequentemente nello stesso punto/metodo/funzione!</p>
-
-<p>Solitamente accade questo:</p>
-
-<p>si scrive una funzione e si inizia a riutilizzarla nei vari punti del progetto, man mano che la riutilizziamo si inizia ad aggiungere parametri, condizioni,
-codice nuovo che serve ad 8 dei 10 punti dove viene utilizzata ma nei 2 casi dove non serve passiamo booleane (con valori di default) per gestire queste eccezioni.</p>
-
-<p>La nostra funzione diventa qualcosa di ingestibile in poco tempo ed il nostro codice perde estensibilità,
-aumenta la sua rigidità e la possibilità di introdurre nuovi bugs, quindi, diminuisce la nostra produzione!</p>
-
-<p>Ho avuto più volte dibattiti e discussioni con amici e colleghi su questo argomento, alcuni sostengono che ci deve essere un punto
-unico dove convogliare tutta la funzionalità. Io non sono molto d&rsquo;accordo con questa filosofia.
-Ci può essere un punto solo dove gestire/aggiungere una funzionalità solo se questa non invalida lo scopo del metodo ovvero la sua responsabilità <a href="/post/single-responsibility">(SRP)</a>, molte volte le condizioni che aggiungiamo (IF) lo fanno!</p>
-
-<p>La cosa più importante è, avere layer/moduli ben organizzati dove ritroviamo facilmente queste &ldquo;pseudo&rdquo; duplicazioni e si possono rivedere e refactorizzare più facilmente essendo isolate, piuttosto che avere un metodo imbuto ingestibile, oppure, logiche simili sparse in giro per il progetto!</p>
-
-<p>Una tecnica molto apprezzata e quella del <a href="https://martinfowler.com/bliki/FluentInterface.html">fluent interface</a> (attenzione non è il <a href="https://en.wikipedia.org/wiki/Builder_pattern">builder pattern</a>), dove si creano tante piccole funzionalità
-e si concatenano insieme per crearne altre più complesse, un po&rsquo; come in una catena di montaggio dove ogni punto ha una singola responsabilità.
-Con questa tecnica se voglio escludere una parte di codice, invece di aggiungere una condizione (IF) che mi esclude quella parte, creo una variante dove quel blocco non esiste nella mia catena.</p>
-
-<p>L&rsquo;immagine della catena di montaggio è la più efficace per capire questa tecnica, dove posso sempre facilmente riorganizzare la mia pipeline, spostare prima o dopo le varie operazioni, aggiungerne di nuove facilmente, crearne altre parallele simili ed efficaci! Anche con questa tecnica è sempre importante mantenere le varie concatenazioni in un layer separato.</p>
-
-<p><strong>La mia conclusione è che ci troviamo sempre in queste condizioni (capita ancora anche a me) per la fretta di aggiungere nuove funzionalità
-e scarso refactoring; quando questo sintomo diventa molto frequente, si entra nell&rsquo;effetto <a href="/post/broken-windows">Broken Window</a> e nemmeno la <a href="/post/boy-scout-rule">Boyscout Rule</a> ci aiuta più!</strong></p>
-
-<p>Photo by Xiang Hu on Unsplash
-<a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@iamthewind?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Xiang Hu"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-1px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Xiang Hu</span></a></p>
-
-      </article>
-
-      <ul class="pager blog-pager">
+  <div class="container" role="main">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         
-          <li class="previous">
-            <a href="https://erdotufa.github.io/post/inheritance-vs-compositioning/" data-toggle="tooltip" data-placement="top" title="Ereditarietà VS Composizione">&larr; Previous Post</a>
-          </li>
+        <div class="posts-list">
+          
+            <article class="post-preview">
+              <a href="https://erdotufa.github.io/post/sindrome-framework-developer/">
+                <h2 class="post-title">Sindrome da Framework Developer</h2>
+    
+                
+                  <h3 class="post-subtitle">
+                    Se l&#39;unica cosa che hai è un martello tratterai tutto come se fosse un chiodo!
+                  </h3>
+                
+              </a>
+    
+              <p class="post-meta">
+                Posted on March 25, 2019
+              </p>
+              <div class="post-entry">
+                
+                  Dopo un pò di esperienza noi sviluppatori ci sentiamo come i supereroi, iniziamo qualche lettura di libri su design patterns, clean code, seguire blog, twitter o personaggi famosi conosciuti durante qualche conferenza; dimenticando completamente di avere un proprio cervello da usare, e di un&rsquo;altra cosa molto importante, ovvero:
+ il contesto in cui ci troviamo ed il nostro tipo di prodotto!!!
+ Presi dall&rsquo;entusiasmo iniziamo a pensare a tutto con design patterns ed a sviluppare qualsiasi cosa pensando come se fosse un framework.
+                  <a href="https://erdotufa.github.io/post/sindrome-framework-developer/" class="post-read-more">[Read More]</a>
+                
+              </div>
+    
+              
+                <span class="post-meta">
+                  
+                    #<a href="/tags/software-entropy">Software entropy</a>&nbsp;
+                  
+                    #<a href="/tags/software-design">Software design</a>&nbsp;
+                  
+                    #<a href="/tags/design-patterns">Design patterns</a>&nbsp;
+                  
+                </span>
+              
+    
+            </article>
+          
+        </div>
         
-        
-          <li class="next">
-            <a href="https://erdotufa.github.io/post/sindrome-framework-developer/" data-toggle="tooltip" data-placement="top" title="Sindrome da Framework Developer">Next Post &rarr;</a>
-          </li>
-        
-      </ul>
-
-      
-        
-      
-
+      </div>
     </div>
   </div>
-</div>
 
     <footer>
   <div class="container">
