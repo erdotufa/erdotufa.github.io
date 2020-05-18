@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>tufaerdogan@gmail.com (Erdogan Tufa)</managingEditor>
     <webMaster>tufaerdogan@gmail.com (Erdogan Tufa)</webMaster>
-    <lastBuildDate>Mon, 25 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 18 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://erdotufa.github.io/tags/software-entropy/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Syndrome of the Framework Developer</title>
+      <link>https://erdotufa.github.io/post/syndrome-framework-developer/</link>
+      <pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate>
+      <author>tufaerdogan@gmail.com (Erdogan Tufa)</author>
+      <guid>https://erdotufa.github.io/post/syndrome-framework-developer/</guid>
+      <description>&amp;ldquo;Software developer because superhero isn&amp;rsquo;t an official job title&amp;rdquo;
+ After a little experience in software sometimes as Developer we feel like superheroes (and we are!); maybe that happens after reading a book about design patterns, clean code, following blogs, twitter or famous people knew in a conference; but we forget completely that we have our own brain, and then the most import thing:
+ the context of our product!</description>
+    </item>
     
     <item>
       <title>Sindrome da Framework Developer</title>

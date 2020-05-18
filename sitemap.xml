@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://erdotufa.github.io/post/syndrome-framework-developer/</loc>
+    <lastmod>2020-05-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://erdotufa.github.io/post/sindrome-framework-developer/</loc>
     <lastmod>2019-03-25T00:00:00+00:00</lastmod>
   </url>
@@ -47,7 +52,7 @@
   
   <url>
     <loc>https://erdotufa.github.io/</loc>
-    <lastmod>2019-03-25T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -70,7 +75,7 @@
   
   <url>
     <loc>https://erdotufa.github.io/tags/design-patterns/</loc>
-    <lastmod>2019-03-25T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -81,7 +86,7 @@
   
   <url>
     <loc>https://erdotufa.github.io/post/</loc>
-    <lastmod>2019-03-25T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -93,13 +98,13 @@
   
   <url>
     <loc>https://erdotufa.github.io/tags/software-design/</loc>
-    <lastmod>2019-03-25T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://erdotufa.github.io/tags/software-entropy/</loc>
-    <lastmod>2019-03-25T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
