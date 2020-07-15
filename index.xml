@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>tufaerdogan@gmail.com (Erdogan Tufa)</managingEditor>
     <webMaster>tufaerdogan@gmail.com (Erdogan Tufa)</webMaster>
-    <lastBuildDate>Mon, 18 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 15 Jul 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://erdotufa.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>The great power of Nothing</title>
+      <link>https://erdotufa.github.io/post/the-great-power-of-nothing/</link>
+      <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
+      <author>tufaerdogan@gmail.com (Erdogan Tufa)</author>
+      <guid>https://erdotufa.github.io/post/the-great-power-of-nothing/</guid>
+      <description>In this historical moment with this global situation in the “pandemic world”, I saw most people doing some things without sense. One of these that I did was to watch again “The neverending story” movie by Michael Ende. At first I was watching it like a story for children, in the same mode of when I was young. But at some point of the story, during the conversation between the Bad Gmork and the Warrior Atreyu, I had an intuition: maybe the movie wasn’t for children at all, but it was a hidden deeper message for humanity.</description>
+    </item>
     
     <item>
       <title>Syndrome of the Framework Developer</title>
@@ -118,8 +127,10 @@ A cosa é dovuto?  La maggioranza dei progetti parte da un idea apparentemente &
       <guid>https://erdotufa.github.io/page/about/</guid>
       <description>My name is Erdogan Tufa.
 I&amp;rsquo;m a full-stack .NET developer who is passionate about design patterns (in the real world), SOLID principles, and clean code practices.
-Testimonials  Giovanni Degiorgi Business Analyst
-I had the pleasure to work with Erdo for several projects, starting from simple webpage to more complex server client architectures. He is confident about technical concepts definition as well as the execution of the real work. All problems encountered during the development were solved easily by him and in no case I had the feeling he wasn’t in control of the project.</description>
+
+Testimonials 
+ Giovanni Degiorgi Business Analyst
+I had the pleasure to work with Erdo for several projects, starting from simple webpage to more complex server client architectures. He is confident about technical concepts definition as well as the execution of the real work.</description>
     </item>
     
   </channel>

@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>tufaerdogan@gmail.com (Erdogan Tufa)</managingEditor>
     <webMaster>tufaerdogan@gmail.com (Erdogan Tufa)</webMaster>
-    <lastBuildDate>Thu, 21 Jun 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 15 Jul 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://erdotufa.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Change</title>
+      <link>https://erdotufa.github.io/tags/change/</link>
+      <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
+      <author>tufaerdogan@gmail.com (Erdogan Tufa)</author>
+      <guid>https://erdotufa.github.io/tags/change/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Clean Code</title>
@@ -36,6 +45,24 @@
       <pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate>
       <author>tufaerdogan@gmail.com (Erdogan Tufa)</author>
       <guid>https://erdotufa.github.io/tags/design-patterns/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Motivational</title>
+      <link>https://erdotufa.github.io/tags/motivational/</link>
+      <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
+      <author>tufaerdogan@gmail.com (Erdogan Tufa)</author>
+      <guid>https://erdotufa.github.io/tags/motivational/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Personal Growth</title>
+      <link>https://erdotufa.github.io/tags/personal-growth/</link>
+      <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
+      <author>tufaerdogan@gmail.com (Erdogan Tufa)</author>
+      <guid>https://erdotufa.github.io/tags/personal-growth/</guid>
       <description></description>
     </item>
     
@@ -72,6 +99,15 @@
       <pubDate>Thu, 07 Sep 2017 00:00:00 +0000</pubDate>
       <author>tufaerdogan@gmail.com (Erdogan Tufa)</author>
       <guid>https://erdotufa.github.io/tags/solid/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Success</title>
+      <link>https://erdotufa.github.io/tags/success/</link>
+      <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
+      <author>tufaerdogan@gmail.com (Erdogan Tufa)</author>
+      <guid>https://erdotufa.github.io/tags/success/</guid>
       <description></description>
     </item>
     
